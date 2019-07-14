@@ -1,0 +1,17 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Alan D. E. Cruse -- Developer -- <twitter>
+    Greg Watkinson -- Designer --
+
+
+# THANKS
+
+    Julia Herbst
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    jQuery, Modernizr, Normalize.css, barebones.css 
