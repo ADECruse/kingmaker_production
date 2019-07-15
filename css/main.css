@@ -29,11 +29,11 @@
 /* ENV Variables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Media breakpoint variables for use in media queries
-* 	Note: this section is currently commented out pending release of 
+* 	Note: this section is currently commented out pending release of
 * 	final CSS env() spec
-*  Breakpoints based on 
+*  Breakpoints based on
 *	 https://medium.freecodecamp.org/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862
-* 
+*
 */
 
 
@@ -55,24 +55,24 @@ html {
 
   --border-color: hsl(var(--theme-hue), 0%, 73%);					/* #bbbbbb		button border */
 	--border-color-softer: hsl(var(--theme-hue), 0%, 82%);	/* #d1d1d1		textarea,select,code,td,hr border	 */
-	
+
 	--background-color: white;														/* transparent body background; textarea,select background */
 	--background-color-softer: hsl(var(--theme-hue), 0%, 95%);
   --code-background: hsl(var(--theme-hue), 0%, 95%);			/* #f1f1f1 		code background*/
 
 	--button-primary-color: white;
-  
-	
+
+
 	/* Note: Skeleton was based off a 10px font sizing for REM  */
 	/* 62.5% of typical 16px browser default = 10px */
 	--base-font-size: 62.5%;
-	
+
 	/* Grid Defaults - default to match orig skeleton settings */
 	--grid-max-width: 960px;
 }
 
 /*  Dark Theme
-	Note: prefers-color-scheme selector support is still limited, but 
+	Note: prefers-color-scheme selector support is still limited, but
 	included for future and an example of defining a different base 'theme'
 */
 @media (prefers-color-scheme: dark) {
@@ -90,14 +90,14 @@ html {
 
 		--border-color: hsl(var(--theme-hue), 0%, 27%);					/* button border */
 		--border-color-softer: hsl(var(--theme-hue), 0%, 20%);	/* textarea,select,code,td,hr border	 */
-	
+
 		--background-color: hsl(var(--theme-hue), 0%, 12%);			/* body background; textarea,select background */
 		--background-color-softer: hsl(var(--theme-hue), 0%, 18%);
 		--code-background: hsl(var(--theme-hue), 0%, 5%);				/* code background*/
 
 		--button-primary-color: white;
   }
-	
+
 	img.value-img {
 		filter: invert(0.8);
 	}
@@ -129,7 +129,7 @@ html {
 	display: grid;
 	grid-gap: 20px;
 	gap: 20px;
-	
+
 	/* by default use min 200px wide columns auto-fit into width */
 	grid-template-columns: minmax(200px, 1fr);
 }
@@ -140,7 +140,7 @@ html {
 		grid-template-columns: repeat(3, 1fr);
 		padding: 10px 0;
 	}
-	
+
 	/* basic grids */
 	.grid-container.fifths {
 		grid-template-columns: repeat(5, 1fr);
@@ -157,7 +157,7 @@ html {
 	.grid-container.full {
 		grid-template-columns: 1fr;
 	}
-	
+
 }
 
 
@@ -177,8 +177,17 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: var(--text-color-normal); 
+  color: var(--text-color-normal);
   background-color: var(--background-color);;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
 }
 
 
@@ -372,7 +381,7 @@ code {
 pre > code {
   display: block;
   padding: 1rem 1.5rem;
-  white-space: pre; 
+  white-space: pre;
   overflow: auto; }
 
 
@@ -428,7 +437,60 @@ form {
 .u-align-left {
 	text-align: left; }
 .u-align-right {
-	text-align: right; }
+  text-align: right; }
+/*
+ * Hide visually and from screen readers
+ */
+.hidden {
+  display: none !important;
+}
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
 
 
 /* Misc
@@ -438,6 +500,17 @@ hr {
   margin-bottom: 3.5rem;
   border-width: 0;
   border-top: 1px solid var(--border-color-softer); }
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
 
 
 /* Clearing
