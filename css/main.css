@@ -428,7 +428,7 @@ form {
   margin-bottom: 2.5rem; }
 
 
-/* Utilities
+/** Utilities
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .u-full-width {
   width: 100%;
@@ -436,14 +436,13 @@ form {
 .u-max-full-width {
   max-width: 100%;
   box-sizing: border-box; }
-.u-pull-right {
-  float: right; }
-.u-pull-left {
-  float: left; }
 .u-align-left {
 	text-align: left; }
 .u-align-right {
   text-align: right; }
+.u-full-screen {
+  height: 100vh; }
+
 /*
  * Hide visually and from screen readers
  */
@@ -497,7 +496,7 @@ form {
   visibility: hidden;
 }
 
-/** Custom
+/** Custom classes and IDs
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .banner {
   height: 100vh;
@@ -505,6 +504,12 @@ form {
 }
 
 .banner img {
+
+}
+
+#colour {
+  background-image: url(https://res.cloudinary.com/cruse/image/upload/v1562920704/Kingmaker/cat2_jsz4ox.jpg);
+  background-attachment: fixed;
 
 }
 
