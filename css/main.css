@@ -46,7 +46,8 @@ html {
   --accent-hue: 194;			/* blue */
 
   --text-color-richer: hsl(var(--theme-hue), 0%, 95%);		/* 		*/
-  --text-color-normal: hsl(var(--theme-hue), 0%, 80%);		/* text color; button:hover:focus color */
+  --text-color-normal: hsla(0, 100%, 100%, 1);
+  /* --text-color-normal: hsl(var(--theme-hue), 0%, 80%);		text color; button:hover:focus color */
   --text-color-softer: hsl(var(--theme-hue), 0%, 67%);		/* button color; button:hover border */
 
   --accent-color: hsl(var(--accent-hue), 76%, 49%);				/* link; button-primary bg+border; textarea,select:focus border */
@@ -68,7 +69,7 @@ html {
 	--base-font-size: 62.5%;
 
 	/* Grid Defaults - default to match orig skeleton settings */
-	--grid-max-width: 1080px;
+	--grid-max-width: 1920px;
 }
 
 /*  light Theme
@@ -211,7 +212,7 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
   line-height: 7.3rem;
 }
 
-/* Larger than phablet */
+/* Larger than mobile */
 @media (min-width: 600px) {
   h1 { font-size: 5.0rem; }
   h2 { font-size: 4.2rem; }
@@ -221,8 +222,19 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
   h6 { font-size: 1.5rem; }
   #colour h2 {
     margin: 0;
+    font-size: 12rem;
+    line-height: 9.1rem;
+  }
+}
+/* Larger than phablet */
+@media (min-width: 900px) {}
+
+/* Larger than tablet */
+@media (min-width: 1200px) {
+  #colour h2 {
+    margin: 0;
     font-size: 20rem;
-    line-height: 7.3rem;
+    line-height: 14.9rem;
   }
 }
 
@@ -515,12 +527,21 @@ form {
 /** Custom classes and IDs
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .banner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
   height: 100vh;
   padding: 2rem;
 }
 
 .banner img {
 
+}
+
+.banner a {
+  align-self: center;
 }
 
 #colour {
