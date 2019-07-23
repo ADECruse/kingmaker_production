@@ -68,7 +68,7 @@ html {
 	--base-font-size: 62.5%;
 
 	/* Grid Defaults - default to match orig skeleton settings */
-	--grid-max-width: 100%;
+	--grid-max-width: 960px;
 }
 
 /*  light Theme
@@ -124,7 +124,7 @@ included for future and an example of defining a different base 'theme'
 	position: relative;
 	max-width: var(--grid-max-width);
 	margin: 0 auto;
-	padding: 20px;
+	padding: 20px 0;
 	text-align: center;
 	display: grid;
 	grid-gap: 20px;
@@ -508,9 +508,18 @@ form {
 }
 
 #colour {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
   background-image: url(https://res.cloudinary.com/cruse/image/upload/v1562920704/Kingmaker/cat2_jsz4ox.jpg);
   background-attachment: fixed;
+  background-size: cover;
 
+}
+
+.content {
+  background-color: var(--background-color);
 }
 
 /** Misc
