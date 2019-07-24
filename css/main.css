@@ -127,7 +127,8 @@ included for future and an example of defining a different base 'theme'
 	margin: 0 auto;
 	padding: 0px 0;
 	text-align: center;
-	display: grid;
+  display: grid;
+  border-style: none;
 	/* grid-gap: 20px;
 	gap: 20px; */
 
