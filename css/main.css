@@ -231,6 +231,11 @@ strong {
   font-weight: 700;
 }
 
+em {
+  font-weight: 400;
+  font-style: normal;
+}
+
 b {
   font-weight: 400;
 }

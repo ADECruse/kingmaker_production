@@ -27,7 +27,19 @@
   font-size: 2rem;
 }
 
-.copy-content img {
+
+
+.image {
+
+}
+
+#story .copy-content img {
+  position: relative;
+  z-index: -1;
+}
+
+#capture .copy-content img {
+  position: relative;
   z-index: -1;
 }
 
