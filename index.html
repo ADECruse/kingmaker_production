@@ -136,15 +136,44 @@
     <!-- <section id="items" class=""></section> -->
 
     <!--* Contact form -->
-    <!-- <section id="contact" class="">
+    <section id="contact" class="">
       <header>
-        <h2>Get in Contact</h2>
+        <h2>Work with us</h2>
       </header>
-    </section> -->
+      <form method="post" action="contact.php">
+        <div class="row">
+          <div class="six columns">
+            <label for="name">Name</label>
+            <input class="" type="text" name="client_name" placeholder="Your name or organisation" id="name" pattern=[A-Z\sa-z]{3,20} required>
+          </div>
+          <div class="six columns">
+            <label for="email">Email</label>
+            <input class="u-max-full-width" type="email" name="client_email" placeholder="name@example.com" id="email" required>
+          </div>
+          <!-- <div class="six columns">
+            <label for="exampleRecipientInput">Reason for contacting</label>
+            <select class="u-full-width" id="exampleRecipientInput">
+              <option value="Option 1">Questions</option>
+              <option value="Option 2">Admiration</option>
+              <option value="Option 3">Can I get your number?</option>
+            </select>
+          </div> -->
+        </div>
+        <label for="message">Message</label>
+        <textarea class="u-max-full-width" name="client_message" rows="6" placeholder="Tell us how we can help you or your organisation" id="message" required></textarea>
+        <label class="example-send-yourself-copy">
+          <input type="checkbox">
+          <span class="label-body">Send a copy to yourself</span>
+        </label>
+        <input class="button" type="submit" name="submit" value="Submit">
+      </form>
+    </section>
   </main>
   <!-- * Footer -->
   <!-- TODO: -->
-  <footer></footer>
+  <footer>
+    <p>&copy; 2019 Kingmaker Design</p>
+  </footer>
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
