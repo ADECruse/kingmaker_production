@@ -29,8 +29,8 @@
 
 
 
-.image {
-
+.image-border {
+  border-style: solid;
 }
 
 #story .copy-content img {
